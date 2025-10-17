@@ -170,7 +170,7 @@ async function processCustomerAndLead(connection, leadData) {
       parsedPhone.trim(),
       country_code.trim(),
       city.trim(),
-      adset_name.trim(),
+      campaign_name.trim(),
       "Meta",
       secondarysource,
       customerId,

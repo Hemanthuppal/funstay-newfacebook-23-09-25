@@ -19,7 +19,7 @@ const io = new Server(server, {
   transports: ['websocket', 'polling'],
 });
 
-const PORT = 4004;
+const PORT = 4005;
 
 
 
@@ -62,11 +62,11 @@ io.on('connection', (socket) => {
   });
 });
 
-//setInterval(syncDatas, 20 * 60 * 1000);
-//  setInterval(syncData, 30 * 60 * 1000);
+setInterval(syncDatas, 20 * 60 * 1000);
+ setInterval(syncData, 30 * 60 * 1000);
 
- setInterval(syncDatas, 20000);
- setInterval(syncData, 10000);
+//  setInterval(syncDatas, 20000);
+//  setInterval(syncData, 10000);
 
 
 server.listen(PORT, () => {

@@ -55,7 +55,7 @@ function formatDate(dateStr) {
 
 function createDescription(leadData) {
   const descriptionFields = [
-    { label: "Are you interested for the Dubai trip?", value: leadData[12] || "" }, // M
+    { label: "Are you interested in this trip?", value: leadData[12] || "" }, // M
     { label: "When are you planning to travel?", value: leadData[13] || "" },       // N
     { label: "How soon do you want to book your holiday?", value: leadData[14] || "" }, // O
     { label: "Do you need assistance with flight bookings?", value: leadData[15] || "" }, // P
@@ -150,7 +150,7 @@ async function processCustomerAndLead(connection, leadData) {
       parsedPhone.trim(), 
       country_code.trim(), 
       city.trim(),
-      adset_name.trim(),
+      campaign_name.trim(),
       "Meta", 
       secondarysource,
       customerId, 
