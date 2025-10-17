@@ -6,7 +6,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const { createConnection } = require("./db");
 
-
+ const { syncDatas } = require('./facebook_5sheet');
  const { syncData } = require('./facebook');
 
 const app = express();
@@ -62,10 +62,10 @@ io.on('connection', (socket) => {
   });
 });
 
-
+//setInterval(syncDatas, 20 * 60 * 1000);
 //  setInterval(syncData, 30 * 60 * 1000);
 
-
+ setInterval(syncDatas, 20000);
  setInterval(syncData, 10000);
 
 
